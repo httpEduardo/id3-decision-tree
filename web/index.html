@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DecisionSeed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <p class="eyebrow">ID3 classifier</p>
+        <h1>DecisionSeed</h1>
+        <p>Train a categorical decision tree and test a sample.</p>
+      </header>
+      <section class="panel">
+        <textarea id="rowsInput" rows="8">[
+  {"weather":"sunny","temp":"hot","label":"no"},
+  {"weather":"sunny","temp":"mild","label":"no"},
+  {"weather":"overcast","temp":"hot","label":"yes"},
+  {"weather":"rainy","temp":"mild","label":"yes"}
+]</textarea>
+        <label>Sample row
+          <input id="rowInput" value='{"weather":"sunny","temp":"hot"}' />
+        </label>
+        <div class="actions">
+          <button id="trainButton">Train</button>
+          <button id="predictButton" class="ghost">Predict</button>
+        </div>
+      </section>
+      <section class="panel">
+        <h2>Output</h2>
+        <pre id="output"></pre>
+      </section>
+    </main>
+    <div class="sprout"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
