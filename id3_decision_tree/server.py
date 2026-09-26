@@ -72,14 +72,14 @@ class Handler(SimpleHTTPRequestHandler):
 
 def run(host="127.0.0.1", port=5173):
     server = ThreadingHTTPServer((host, port), Handler)
-    print(f"DecisionSeed running at http://{host}:{port}")
+    print(f"Id3 Decision Tree running at http://{host}:{port}")
     server.serve_forever()
 
 
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Run DecisionSeed")
+    parser = argparse.ArgumentParser(description="Run Id3 Decision Tree")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=5173)
     args = parser.parse_args()
